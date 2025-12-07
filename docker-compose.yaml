@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # Airflow PostgreSQL Database
+  airflow-postgres:
+    image: postgres:15-alpine
+    container_name: airflow-postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    ports:
+      - "5434:5432"
+    volumes:
+      - airflow-postgres-data:/var/lib/postgresql/data
+    networks:
+      - airflow-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Airflow Webserver
+  airflow-webserver:
+    image: apache/airflow:2.7.3-python3.11
+    container_name: airflow-webserver
+    depends_on:
+      - airflow-postgres
+    environment:
+      - AIRFLOW_HOME=/opt/airflow
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
+      - AIRFLOW__CORE__ENABLE_XCOM_PICKLING=True
+    ports:
+      - "8000:8080"
+    volumes:
+      - /opt/shared/materials/dags:/opt/airflow/dags
+      - /opt/shared/materials/logs:/opt/airflow/logs
+      - /opt/shared/materials/plugins:/opt/airflow/plugins
+      - airflow-config:/opt/airflow/config
+    networks:
+      - airflow-network
+    command: >
+      bash -c "airflow db init &&
+               airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com &&
+               airflow webserver"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Airflow Scheduler
+  airflow-scheduler:
+    image: apache/airflow:2.7.3-python3.11
+    container_name: airflow-scheduler
+    depends_on:
+      - airflow-postgres
+      - airflow-webserver
+    environment:
+      - AIRFLOW_HOME=/opt/airflow
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
+    volumes:
+      - /opt/shared/materials/dags:/opt/airflow/dags
+      - /opt/shared/materials/logs:/opt/airflow/logs
+      - /opt/shared/materials/plugins:/opt/airflow/plugins
+      - airflow-config:/opt/airflow/config
+    networks:
+      - airflow-network
+    command: airflow scheduler
+
+volumes:
+  airflow-postgres-data:
+  airflow-config:
+
+networks:
+  airflow-network:
+    driver: bridge

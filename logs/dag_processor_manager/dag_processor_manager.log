@@ -1,0 +1,997 @@
+[2025-12-07T21:20:43.439+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-12-07T21:20:43.440+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-12-07T21:20:43.440+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-12-07T21:20:43.441+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:20:43.443+0000] {manager.py:758} INFO - There are 0 files in /opt/airflow/dags
+[2025-12-07T21:25:44.303+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:25:44.306+0000] {manager.py:758} INFO - There are 0 files in /opt/airflow/dags
+[2025-12-07T21:30:45.107+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:30:45.114+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:30:47.044+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py                                      0           1  0.18s           2025-12-07T21:30:46
+/opt/airflow/dags/weather_dag.py                                          0           1  0.19s           2025-12-07T21:30:46
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.76s           2025-12-07T21:30:47
+================================================================================
+[2025-12-07T21:31:17.079+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               183  0.01s             0           1  0.18s           2025-12-07T21:30:46
+/opt/airflow/dags/weather_dag.py                                          0           1  0.19s           2025-12-07T21:30:46
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    180  0.04s             1           0  0.76s           2025-12-07T21:30:47
+================================================================================
+[2025-12-07T21:31:47.711+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               198  0.01s             0           1  0.20s           2025-12-07T21:31:17
+/opt/airflow/dags/weather_dag.py                                          0           1  0.21s           2025-12-07T21:31:17
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    195  0.04s             1           0  0.42s           2025-12-07T21:31:17
+================================================================================
+[2025-12-07T21:32:18.328+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               213  0.01s             0           1  0.20s           2025-12-07T21:31:47
+/opt/airflow/dags/weather_dag.py                                          0           1  0.20s           2025-12-07T21:31:48
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    210  0.04s             1           0  0.41s           2025-12-07T21:31:48
+================================================================================
+[2025-12-07T21:32:49.021+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               228  0.01s             0           1  0.23s           2025-12-07T21:32:18
+/opt/airflow/dags/weather_dag.py                                          0           1  0.25s           2025-12-07T21:32:18
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    225  0.04s             1           0  0.47s           2025-12-07T21:32:18
+================================================================================
+[2025-12-07T21:33:19.471+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               243  0.01s             0           1  0.21s           2025-12-07T21:32:49
+/opt/airflow/dags/weather_dag.py                                          0           1  0.20s           2025-12-07T21:32:49
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    240  0.04s             1           0  0.43s           2025-12-07T21:32:49
+================================================================================
+[2025-12-07T21:33:50.117+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               258  0.01s             0           1  0.20s           2025-12-07T21:33:19
+/opt/airflow/dags/weather_dag.py                                          0           1  0.20s           2025-12-07T21:33:19
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    255  0.04s             1           0  0.41s           2025-12-07T21:33:19
+================================================================================
+[2025-12-07T21:34:20.759+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               273  0.01s             0           1  0.20s           2025-12-07T21:33:50
+/opt/airflow/dags/weather_dag.py                                          0           1  0.21s           2025-12-07T21:33:50
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    270  0.04s             1           0  0.47s           2025-12-07T21:33:50
+================================================================================
+[2025-12-07T21:34:51.394+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               288  0.01s             0           1  0.22s           2025-12-07T21:34:20
+/opt/airflow/dags/weather_dag.py                                          0           1  0.21s           2025-12-07T21:34:21
+/opt/airflow/dags/parent_s3_file_monitor_dag.py    285  0.04s             1           0  0.42s           2025-12-07T21:34:21
+================================================================================
+[2025-12-07T21:35:21.841+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               300  0.04s             0           1  0.20s           2025-12-07T21:34:51
+/opt/airflow/dags/weather_dag.py                   303  0.01s             0           1  0.20s           2025-12-07T21:34:51
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.45s           2025-12-07T21:34:51
+================================================================================
+[2025-12-07T21:35:45.188+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:35:45.198+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:35:52.321+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               315  0.04s             0           1  0.20s           2025-12-07T21:35:21
+/opt/airflow/dags/weather_dag.py                   318  0.01s             0           1  0.20s           2025-12-07T21:35:22
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:35:22
+================================================================================
+[2025-12-07T21:36:22.774+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               330  0.04s             0           1  0.21s           2025-12-07T21:35:52
+/opt/airflow/dags/weather_dag.py                   333  0.01s             0           1  0.22s           2025-12-07T21:35:52
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:35:52
+================================================================================
+[2025-12-07T21:36:53.236+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               345  0.04s             0           1  0.20s           2025-12-07T21:36:22
+/opt/airflow/dags/weather_dag.py                   348  0.01s             0           1  0.22s           2025-12-07T21:36:22
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:36:23
+================================================================================
+[2025-12-07T21:37:23.655+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               360  0.04s             0           1  0.20s           2025-12-07T21:36:53
+/opt/airflow/dags/weather_dag.py                   363  0.01s             0           1  0.20s           2025-12-07T21:36:53
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T21:36:53
+================================================================================
+[2025-12-07T21:37:54.074+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               375  0.04s             0           1  0.20s           2025-12-07T21:37:23
+/opt/airflow/dags/weather_dag.py                   378  0.01s             0           1  0.20s           2025-12-07T21:37:23
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.46s           2025-12-07T21:37:24
+================================================================================
+[2025-12-07T21:38:24.506+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               390  0.04s             0           1  0.20s           2025-12-07T21:37:54
+/opt/airflow/dags/weather_dag.py                   393  0.01s             0           1  0.20s           2025-12-07T21:37:54
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:37:55
+================================================================================
+[2025-12-07T21:38:54.949+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               405  0.04s             0           1  0.20s           2025-12-07T21:38:24
+/opt/airflow/dags/weather_dag.py                   408  0.01s             0           1  0.20s           2025-12-07T21:38:24
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T21:38:26
+================================================================================
+[2025-12-07T21:39:25.401+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               420  0.04s             0           1  0.20s           2025-12-07T21:38:55
+/opt/airflow/dags/weather_dag.py                   423  0.01s             0           1  0.21s           2025-12-07T21:38:55
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:38:56
+================================================================================
+[2025-12-07T21:39:55.837+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               435  0.04s             0           1  0.20s           2025-12-07T21:39:25
+/opt/airflow/dags/weather_dag.py                   438  0.01s             0           1  0.20s           2025-12-07T21:39:25
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:39:26
+================================================================================
+[2025-12-07T21:40:26.271+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               450  0.04s             0           1  0.20s           2025-12-07T21:39:55
+/opt/airflow/dags/weather_dag.py                   453  0.01s             0           1  0.19s           2025-12-07T21:39:56
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:39:57
+================================================================================
+[2025-12-07T21:40:45.599+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:40:45.608+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:40:56.754+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               465  0.04s             0           1  0.20s           2025-12-07T21:40:26
+/opt/airflow/dags/weather_dag.py                   468  0.01s             0           1  0.20s           2025-12-07T21:40:26
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:40:27
+================================================================================
+[2025-12-07T21:41:27.189+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               480  0.04s             0           1  0.20s           2025-12-07T21:40:56
+/opt/airflow/dags/weather_dag.py                   483  0.01s             0           1  0.19s           2025-12-07T21:40:56
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.39s           2025-12-07T21:40:58
+================================================================================
+[2025-12-07T21:41:57.618+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               495  0.04s             0           1  0.20s           2025-12-07T21:41:27
+/opt/airflow/dags/weather_dag.py                   498  0.01s             0           1  0.20s           2025-12-07T21:41:27
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:41:28
+================================================================================
+[2025-12-07T21:42:28.051+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               510  0.04s             0           1  0.20s           2025-12-07T21:41:57
+/opt/airflow/dags/weather_dag.py                   513  0.01s             0           1  0.19s           2025-12-07T21:41:57
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:41:59
+================================================================================
+[2025-12-07T21:42:58.488+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               525  0.04s             0           1  0.20s           2025-12-07T21:42:28
+/opt/airflow/dags/weather_dag.py                   528  0.01s             0           1  0.20s           2025-12-07T21:42:28
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:42:29
+================================================================================
+[2025-12-07T21:43:28.930+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               540  0.04s             0           1  0.20s           2025-12-07T21:42:58
+/opt/airflow/dags/weather_dag.py                   543  0.01s             0           1  0.20s           2025-12-07T21:42:58
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:43:00
+================================================================================
+[2025-12-07T21:43:59.379+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               555  0.04s             0           1  0.21s           2025-12-07T21:43:29
+/opt/airflow/dags/weather_dag.py                   558  0.02s             0           1  0.20s           2025-12-07T21:43:29
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T21:43:30
+================================================================================
+[2025-12-07T21:44:29.827+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               570  0.04s             0           1  0.20s           2025-12-07T21:43:59
+/opt/airflow/dags/weather_dag.py                   573  0.01s             0           1  0.20s           2025-12-07T21:43:59
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:44:00
+================================================================================
+[2025-12-07T21:45:00.279+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               585  0.04s             0           1  0.20s           2025-12-07T21:44:29
+/opt/airflow/dags/weather_dag.py                   588  0.01s             0           1  0.20s           2025-12-07T21:44:30
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:44:31
+================================================================================
+[2025-12-07T21:45:30.723+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               600  0.04s             0           1  0.20s           2025-12-07T21:45:00
+/opt/airflow/dags/weather_dag.py                   603  0.01s             0           1  0.19s           2025-12-07T21:45:00
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:45:01
+================================================================================
+[2025-12-07T21:45:46.027+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:45:46.038+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:46:01.211+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               615  0.04s             0           1  0.20s           2025-12-07T21:45:30
+/opt/airflow/dags/weather_dag.py                   618  0.01s             0           1  0.20s           2025-12-07T21:45:30
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:45:32
+================================================================================
+[2025-12-07T21:46:31.661+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               630  0.04s             0           1  0.20s           2025-12-07T21:46:01
+/opt/airflow/dags/weather_dag.py                   633  0.01s             0           1  0.20s           2025-12-07T21:46:01
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:46:02
+================================================================================
+[2025-12-07T21:47:02.107+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               645  0.04s             0           1  0.19s           2025-12-07T21:46:31
+/opt/airflow/dags/weather_dag.py                   648  0.01s             0           1  0.20s           2025-12-07T21:46:31
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:46:33
+================================================================================
+[2025-12-07T21:47:32.556+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               660  0.04s             0           1  0.21s           2025-12-07T21:47:02
+/opt/airflow/dags/weather_dag.py                   663  0.01s             0           1  0.20s           2025-12-07T21:47:02
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:47:03
+================================================================================
+[2025-12-07T21:48:02.990+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               675  0.04s             0           1  0.20s           2025-12-07T21:47:32
+/opt/airflow/dags/weather_dag.py                   678  0.01s             0           1  0.20s           2025-12-07T21:47:32
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:47:34
+================================================================================
+[2025-12-07T21:48:33.435+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               690  0.04s             0           1  0.20s           2025-12-07T21:48:03
+/opt/airflow/dags/weather_dag.py                   693  0.01s             0           1  0.20s           2025-12-07T21:48:03
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:48:04
+================================================================================
+[2025-12-07T21:49:03.873+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               705  0.04s             0           1  0.20s           2025-12-07T21:48:33
+/opt/airflow/dags/weather_dag.py                   708  0.01s             0           1  0.19s           2025-12-07T21:48:33
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:48:35
+================================================================================
+[2025-12-07T21:49:34.304+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               720  0.04s             0           1  0.20s           2025-12-07T21:49:04
+/opt/airflow/dags/weather_dag.py                   723  0.01s             0           1  0.20s           2025-12-07T21:49:04
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:49:05
+================================================================================
+[2025-12-07T21:50:04.739+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               735  0.04s             0           1  0.20s           2025-12-07T21:49:34
+/opt/airflow/dags/weather_dag.py                   738  0.01s             0           1  0.20s           2025-12-07T21:49:34
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:49:35
+================================================================================
+[2025-12-07T21:50:35.181+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               750  0.04s             0           1  0.20s           2025-12-07T21:50:04
+/opt/airflow/dags/weather_dag.py                   753  0.01s             0           1  0.19s           2025-12-07T21:50:04
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.44s           2025-12-07T21:50:06
+================================================================================
+[2025-12-07T21:50:46.456+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:50:46.465+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:51:05.677+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               765  0.04s             0           1  0.20s           2025-12-07T21:50:35
+/opt/airflow/dags/weather_dag.py                   768  0.01s             0           1  0.19s           2025-12-07T21:50:35
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:50:36
+================================================================================
+[2025-12-07T21:51:36.125+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               780  0.04s             0           1  0.20s           2025-12-07T21:51:05
+/opt/airflow/dags/weather_dag.py                   783  0.01s             0           1  0.20s           2025-12-07T21:51:05
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:51:07
+================================================================================
+[2025-12-07T21:52:06.560+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               795  0.04s             0           1  0.20s           2025-12-07T21:51:36
+/opt/airflow/dags/weather_dag.py                   798  0.01s             0           1  0.20s           2025-12-07T21:51:36
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:51:37
+================================================================================
+[2025-12-07T21:52:36.997+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               810  0.04s             0           1  0.20s           2025-12-07T21:52:06
+/opt/airflow/dags/weather_dag.py                   813  0.01s             0           1  0.19s           2025-12-07T21:52:06
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:52:08
+================================================================================
+[2025-12-07T21:53:07.444+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               825  0.04s             0           1  0.20s           2025-12-07T21:52:37
+/opt/airflow/dags/weather_dag.py                   828  0.01s             0           1  0.20s           2025-12-07T21:52:37
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:52:38
+================================================================================
+[2025-12-07T21:53:37.878+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               840  0.04s             0           1  0.20s           2025-12-07T21:53:07
+/opt/airflow/dags/weather_dag.py                   843  0.01s             0           1  0.20s           2025-12-07T21:53:07
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:53:09
+================================================================================
+[2025-12-07T21:54:08.307+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               855  0.04s             0           1  0.20s           2025-12-07T21:53:38
+/opt/airflow/dags/weather_dag.py                   858  0.01s             0           1  0.20s           2025-12-07T21:53:38
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:53:39
+================================================================================
+[2025-12-07T21:54:38.754+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               870  0.04s             0           1  0.20s           2025-12-07T21:54:08
+/opt/airflow/dags/weather_dag.py                   873  0.01s             0           1  0.20s           2025-12-07T21:54:08
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:54:09
+================================================================================
+[2025-12-07T21:55:09.221+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               885  0.04s             0           1  0.20s           2025-12-07T21:54:38
+/opt/airflow/dags/weather_dag.py                   888  0.01s             0           1  0.20s           2025-12-07T21:54:38
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:54:40
+================================================================================
+[2025-12-07T21:55:39.670+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               900  0.04s             0           1  0.20s           2025-12-07T21:55:09
+/opt/airflow/dags/weather_dag.py                   903  0.01s             0           1  0.20s           2025-12-07T21:55:09
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:55:10
+================================================================================
+[2025-12-07T21:55:46.915+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T21:55:46.926+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T21:56:10.153+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               915  0.04s             0           1  0.20s           2025-12-07T21:55:39
+/opt/airflow/dags/weather_dag.py                   918  0.01s             0           1  0.20s           2025-12-07T21:55:39
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:55:41
+================================================================================
+[2025-12-07T21:56:40.597+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               930  0.04s             0           1  0.20s           2025-12-07T21:56:10
+/opt/airflow/dags/weather_dag.py                   933  0.01s             0           1  0.20s           2025-12-07T21:56:10
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:56:11
+================================================================================
+[2025-12-07T21:57:11.061+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               945  0.04s             0           1  0.20s           2025-12-07T21:56:40
+/opt/airflow/dags/weather_dag.py                   948  0.01s             0           1  0.20s           2025-12-07T21:56:40
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:56:42
+================================================================================
+[2025-12-07T21:57:41.514+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               960  0.04s             0           1  0.21s           2025-12-07T21:57:11
+/opt/airflow/dags/weather_dag.py                   963  0.01s             0           1  0.20s           2025-12-07T21:57:11
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:57:12
+================================================================================
+[2025-12-07T21:58:11.953+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               975  0.04s             0           1  0.21s           2025-12-07T21:57:41
+/opt/airflow/dags/weather_dag.py                   978  0.01s             0           1  0.21s           2025-12-07T21:57:41
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.49s           2025-12-07T21:57:43
+================================================================================
+[2025-12-07T21:58:42.386+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py               990  0.04s             0           1  0.19s           2025-12-07T21:58:12
+/opt/airflow/dags/weather_dag.py                   993  0.01s             0           1  0.20s           2025-12-07T21:58:12
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:58:14
+================================================================================
+[2025-12-07T21:59:12.825+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1005  0.04s             0           1  0.21s           2025-12-07T21:58:42
+/opt/airflow/dags/weather_dag.py                  1008  0.01s             0           1  0.20s           2025-12-07T21:58:42
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T21:58:44
+================================================================================
+[2025-12-07T21:59:43.258+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1020  0.04s             0           1  0.19s           2025-12-07T21:59:12
+/opt/airflow/dags/weather_dag.py                  1023  0.01s             0           1  0.20s           2025-12-07T21:59:13
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.43s           2025-12-07T21:59:15
+================================================================================
+[2025-12-07T22:00:13.688+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1035  0.04s             0           1  0.20s           2025-12-07T21:59:43
+/opt/airflow/dags/weather_dag.py                  1038  0.01s             0           1  0.19s           2025-12-07T21:59:43
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T21:59:45
+================================================================================
+[2025-12-07T22:00:44.113+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1050  0.04s             0           1  0.21s           2025-12-07T22:00:13
+/opt/airflow/dags/weather_dag.py                  1053  0.01s             0           1  0.19s           2025-12-07T22:00:13
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:00:16
+================================================================================
+[2025-12-07T22:00:47.340+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T22:00:47.350+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T22:01:14.605+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1065  0.04s             0           1  0.20s           2025-12-07T22:00:44
+/opt/airflow/dags/weather_dag.py                  1068  0.01s             0           1  0.19s           2025-12-07T22:00:44
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:00:46
+================================================================================
+[2025-12-07T22:01:45.044+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1080  0.04s             0           1  0.20s           2025-12-07T22:01:14
+/opt/airflow/dags/weather_dag.py                  1083  0.01s             0           1  0.20s           2025-12-07T22:01:14
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.45s           2025-12-07T22:01:17
+================================================================================
+[2025-12-07T22:02:15.479+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1095  0.04s             0           1  0.19s           2025-12-07T22:01:45
+/opt/airflow/dags/weather_dag.py                  1098  0.01s             0           1  0.19s           2025-12-07T22:01:45
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:01:48
+================================================================================
+[2025-12-07T22:02:45.927+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1110  0.04s             0           1  0.20s           2025-12-07T22:02:15
+/opt/airflow/dags/weather_dag.py                  1113  0.01s             0           1  0.20s           2025-12-07T22:02:15
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.48s           2025-12-07T22:02:19
+================================================================================
+[2025-12-07T22:03:16.352+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1125  0.04s             0           1  0.19s           2025-12-07T22:02:46
+/opt/airflow/dags/weather_dag.py                  1128  0.01s             0           1  0.19s           2025-12-07T22:02:46
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:02:50
+================================================================================
+[2025-12-07T22:03:46.791+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1140  0.04s             0           1  0.19s           2025-12-07T22:03:16
+/opt/airflow/dags/weather_dag.py                  1143  0.02s             0           1  0.20s           2025-12-07T22:03:16
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:03:20
+================================================================================
+[2025-12-07T22:04:17.231+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1155  0.04s             0           1  0.20s           2025-12-07T22:03:46
+/opt/airflow/dags/weather_dag.py                  1158  0.01s             0           1  0.20s           2025-12-07T22:03:46
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.47s           2025-12-07T22:03:51
+================================================================================
+[2025-12-07T22:04:47.668+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1170  0.04s             0           1  0.19s           2025-12-07T22:04:17
+/opt/airflow/dags/weather_dag.py                  1173  0.01s             0           1  0.20s           2025-12-07T22:04:17
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T22:04:22
+================================================================================
+[2025-12-07T22:05:18.107+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1185  0.05s             0           1  0.19s           2025-12-07T22:04:47
+/opt/airflow/dags/weather_dag.py                  1188  0.02s             0           1  0.19s           2025-12-07T22:04:47
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:04:53
+================================================================================
+[2025-12-07T22:05:47.503+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T22:05:47.513+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T22:05:48.597+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1200  0.04s             0           1  0.20s           2025-12-07T22:05:18
+/opt/airflow/dags/weather_dag.py                  1203  0.02s             0           1  0.23s           2025-12-07T22:05:18
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:05:23
+================================================================================
+[2025-12-07T22:06:19.041+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1215  0.05s             0           1  0.20s           2025-12-07T22:05:48
+/opt/airflow/dags/weather_dag.py                  1218  0.02s             0           1  0.20s           2025-12-07T22:05:48
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:05:54
+================================================================================
+[2025-12-07T22:06:49.459+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1230  0.04s             0           1  0.20s           2025-12-07T22:06:19
+/opt/airflow/dags/weather_dag.py                  1233  0.01s             0           1  0.20s           2025-12-07T22:06:19
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:06:24
+================================================================================
+[2025-12-07T22:07:19.890+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1245  0.04s             0           1  0.24s           2025-12-07T22:06:49
+/opt/airflow/dags/weather_dag.py                  1248  0.01s             0           1  0.20s           2025-12-07T22:06:49
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.43s           2025-12-07T22:06:55
+================================================================================
+[2025-12-07T22:07:50.331+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1260  0.04s             0           1  0.19s           2025-12-07T22:07:20
+/opt/airflow/dags/weather_dag.py                  1263  0.01s             0           1  0.21s           2025-12-07T22:07:20
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.46s           2025-12-07T22:07:26
+================================================================================
+[2025-12-07T22:08:20.767+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1275  0.04s             0           1  0.20s           2025-12-07T22:07:50
+/opt/airflow/dags/weather_dag.py                  1278  0.01s             0           1  0.20s           2025-12-07T22:07:50
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:07:57
+================================================================================
+[2025-12-07T22:08:51.200+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1290  0.04s             0           1  0.20s           2025-12-07T22:08:20
+/opt/airflow/dags/weather_dag.py                  1293  0.01s             0           1  0.19s           2025-12-07T22:08:20
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T22:08:28
+================================================================================
+[2025-12-07T22:09:21.634+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1305  0.04s             0           1  0.19s           2025-12-07T22:08:51
+/opt/airflow/dags/weather_dag.py                  1308  0.01s             0           1  0.20s           2025-12-07T22:08:51
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.44s           2025-12-07T22:08:58
+================================================================================
+[2025-12-07T22:09:52.070+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1320  0.04s             0           1  0.20s           2025-12-07T22:09:21
+/opt/airflow/dags/weather_dag.py                  1323  0.01s             0           1  0.20s           2025-12-07T22:09:21
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:09:29
+================================================================================
+[2025-12-07T22:10:22.503+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1335  0.04s             0           1  0.19s           2025-12-07T22:09:52
+/opt/airflow/dags/weather_dag.py                  1338  0.01s             0           1  0.20s           2025-12-07T22:09:52
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:09:59
+================================================================================
+[2025-12-07T22:10:47.858+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T22:10:47.866+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T22:10:52.973+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1350  0.04s             0           1  0.20s           2025-12-07T22:10:22
+/opt/airflow/dags/weather_dag.py                  1353  0.01s             0           1  0.19s           2025-12-07T22:10:22
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.38s           2025-12-07T22:10:30
+================================================================================
+[2025-12-07T22:11:23.418+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1365  0.04s             0           1  0.19s           2025-12-07T22:10:53
+/opt/airflow/dags/weather_dag.py                  1368  0.01s             0           1  0.20s           2025-12-07T22:10:53
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:11:00
+================================================================================
+[2025-12-07T22:11:53.855+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1380  0.04s             0           1  0.20s           2025-12-07T22:11:23
+/opt/airflow/dags/weather_dag.py                  1383  0.01s             0           1  0.20s           2025-12-07T22:11:23
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.43s           2025-12-07T22:11:31
+================================================================================
+[2025-12-07T22:12:24.296+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1395  0.04s             0           1  0.19s           2025-12-07T22:11:54
+/opt/airflow/dags/weather_dag.py                  1398  0.01s             0           1  0.19s           2025-12-07T22:11:54
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:12:01
+================================================================================
+[2025-12-07T22:12:54.742+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1410  0.04s             0           1  0.20s           2025-12-07T22:12:24
+/opt/airflow/dags/weather_dag.py                  1413  0.01s             0           1  0.20s           2025-12-07T22:12:24
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:12:31
+================================================================================
+[2025-12-07T22:13:25.182+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1425  0.04s             0           1  0.20s           2025-12-07T22:12:54
+/opt/airflow/dags/weather_dag.py                  1428  0.01s             0           1  0.19s           2025-12-07T22:12:54
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:13:02
+================================================================================
+[2025-12-07T22:13:55.626+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1440  0.04s             0           1  0.20s           2025-12-07T22:13:25
+/opt/airflow/dags/weather_dag.py                  1443  0.01s             0           1  0.20s           2025-12-07T22:13:25
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:13:32
+================================================================================
+[2025-12-07T22:14:26.061+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1455  0.04s             0           1  0.19s           2025-12-07T22:13:55
+/opt/airflow/dags/weather_dag.py                  1458  0.01s             0           1  0.20s           2025-12-07T22:13:55
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:14:03
+================================================================================
+[2025-12-07T22:14:56.497+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1470  0.04s             0           1  0.19s           2025-12-07T22:14:26
+/opt/airflow/dags/weather_dag.py                  1473  0.01s             0           1  0.20s           2025-12-07T22:14:26
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:14:33
+================================================================================
+[2025-12-07T22:15:26.939+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1485  0.04s             0           1  0.20s           2025-12-07T22:14:56
+/opt/airflow/dags/weather_dag.py                  1488  0.01s             0           1  0.20s           2025-12-07T22:14:56
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:15:04
+================================================================================
+[2025-12-07T22:15:48.272+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-07T22:15:48.282+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2025-12-07T22:15:57.414+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1500  0.04s             0           1  0.20s           2025-12-07T22:15:27
+/opt/airflow/dags/weather_dag.py                  1503  0.01s             0           1  0.19s           2025-12-07T22:15:27
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:15:34
+================================================================================
+[2025-12-07T22:16:27.852+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1515  0.04s             0           1  0.19s           2025-12-07T22:15:57
+/opt/airflow/dags/weather_dag.py                  1518  0.01s             0           1  0.19s           2025-12-07T22:15:57
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.42s           2025-12-07T22:16:05
+================================================================================
+[2025-12-07T22:16:58.304+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1530  0.04s             0           1  0.20s           2025-12-07T22:16:28
+/opt/airflow/dags/weather_dag.py                  1533  0.01s             0           1  0.21s           2025-12-07T22:16:28
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:16:35
+================================================================================
+[2025-12-07T22:17:28.745+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1545  0.04s             0           1  0.20s           2025-12-07T22:16:58
+/opt/airflow/dags/weather_dag.py                  1548  0.01s             0           1  0.20s           2025-12-07T22:16:58
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:17:05
+================================================================================
+[2025-12-07T22:17:59.188+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1560  0.04s             0           1  0.20s           2025-12-07T22:17:28
+/opt/airflow/dags/weather_dag.py                  1563  0.01s             0           1  0.20s           2025-12-07T22:17:28
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:17:36
+================================================================================
+[2025-12-07T22:18:29.638+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1575  0.04s             0           1  0.20s           2025-12-07T22:17:59
+/opt/airflow/dags/weather_dag.py                  1578  0.01s             0           1  0.20s           2025-12-07T22:17:59
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.41s           2025-12-07T22:18:06
+================================================================================
+[2025-12-07T22:19:00.082+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1590  0.04s             0           1  0.20s           2025-12-07T22:18:29
+/opt/airflow/dags/weather_dag.py                  1593  0.01s             0           1  0.21s           2025-12-07T22:18:29
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:18:37
+================================================================================
+[2025-12-07T22:19:30.532+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                          PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/s3_to_redis_dag.py              1605  0.04s             0           1  0.20s           2025-12-07T22:19:00
+/opt/airflow/dags/weather_dag.py                  1608  0.01s             0           1  0.20s           2025-12-07T22:19:00
+/opt/airflow/dags/parent_s3_file_monitor_dag.py                           1           0  0.40s           2025-12-07T22:19:07
+================================================================================
