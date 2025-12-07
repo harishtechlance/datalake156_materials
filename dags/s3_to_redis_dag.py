@@ -1,6 +1,5 @@
 from airflow import DAG
 from airflow.providers.http.sensors.http import HttpSensor
-from airflow.providers.http.operators.http import HttpOperator
 from airflow.operators.python import PythonOperator
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.providers.postgres.hooks.postgres import PostgresHook

@@ -1,0 +1,36 @@
+[2025-12-07T23:06:29.038+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:05:15.450789+00:00 [queued]>
+[2025-12-07T23:06:29.054+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:05:15.450789+00:00 [queued]>
+[2025-12-07T23:06:29.054+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:06:29.172+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): s3_to_redis_group.create_cities_redis_table> on 2025-12-07 23:05:15.450789+00:00
+[2025-12-07T23:06:29.184+0000] {standard_task_runner.py:57} INFO - Started process 3303 to run task
+[2025-12-07T23:06:29.198+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_to_redis_data_pipeline', 's3_to_redis_group.create_cities_redis_table', 'manual__2025-12-07T23:05:15.450789+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/s3_to_redis_dag.py', '--cfg-path', '/tmp/tmpghqh8dee']
+[2025-12-07T23:06:29.213+0000] {standard_task_runner.py:85} INFO - Job 43: Subtask s3_to_redis_group.create_cities_redis_table
+[2025-12-07T23:06:29.285+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:06:29.477+0000] {task_command.py:416} INFO - Running <TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:05:15.450789+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:06:29.910+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_redis_data_pipeline' AIRFLOW_CTX_TASK_ID='s3_to_redis_group.create_cities_redis_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:05:15.450789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:05:15.450789+00:00'
+[2025-12-07T23:06:30.038+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/s3_to_redis_dag.py", line 22, in create_redis_table_func
+    pg_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+                 ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/postgres/hooks/postgres.py", line 125, in get_conn
+    conn = deepcopy(self.connection or self.get_connection(conn_id))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/connection.py", line 477, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `redis_postgres_conn_id` isn't defined
+[2025-12-07T23:06:30.050+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=s3_to_redis_data_pipeline, task_id=s3_to_redis_group.create_cities_redis_table, execution_date=20251207T230515, start_date=20251207T230629, end_date=20251207T230630
+[2025-12-07T23:06:30.092+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 43 for task s3_to_redis_group.create_cities_redis_table (The conn_id `redis_postgres_conn_id` isn't defined; 3303)
+[2025-12-07T23:06:30.133+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-07T23:06:30.261+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

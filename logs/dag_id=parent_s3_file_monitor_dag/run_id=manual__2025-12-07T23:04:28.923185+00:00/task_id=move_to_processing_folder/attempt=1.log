@@ -1,0 +1,15 @@
+[2025-12-07T23:05:10.727+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:05:10.755+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:05:10.756+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:05:10.790+0000] {taskinstance.py:1382} INFO - Executing <Task(S3CopyObjectOperator): move_to_processing_folder> on 2025-12-07 23:04:28.923185+00:00
+[2025-12-07T23:05:10.803+0000] {standard_task_runner.py:57} INFO - Started process 3250 to run task
+[2025-12-07T23:05:10.816+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parent_s3_file_monitor_dag', 'move_to_processing_folder', 'manual__2025-12-07T23:04:28.923185+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/parent_s3_file_monitor_dag.py', '--cfg-path', '/tmp/tmpbcsvzzj4']
+[2025-12-07T23:05:10.829+0000] {standard_task_runner.py:85} INFO - Job 36: Subtask move_to_processing_folder
+[2025-12-07T23:05:10.905+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:05:11.105+0000] {task_command.py:416} INFO - Running <TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder manual__2025-12-07T23:04:28.923185+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:05:11.533+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parent_s3_file_monitor_dag' AIRFLOW_CTX_TASK_ID='move_to_processing_folder' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:04:28.923185+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:04:28.923185+00:00'
+[2025-12-07T23:05:11.593+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:05:11.594+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:05:13.312+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=parent_s3_file_monitor_dag, task_id=move_to_processing_folder, execution_date=20251207T230428, start_date=20251207T230510, end_date=20251207T230513
+[2025-12-07T23:05:13.684+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:05:13.833+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,36 @@
+[2025-12-07T23:12:29.806+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.load_csv_to_redis_table manual__2025-12-07T23:10:16.563090+00:00 [queued]>
+[2025-12-07T23:12:29.819+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.load_csv_to_redis_table manual__2025-12-07T23:10:16.563090+00:00 [queued]>
+[2025-12-07T23:12:29.819+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:12:29.839+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): s3_to_redis_group.load_csv_to_redis_table> on 2025-12-07 23:10:16.563090+00:00
+[2025-12-07T23:12:29.848+0000] {standard_task_runner.py:57} INFO - Started process 3554 to run task
+[2025-12-07T23:12:29.856+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_to_redis_data_pipeline', 's3_to_redis_group.load_csv_to_redis_table', 'manual__2025-12-07T23:10:16.563090+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/s3_to_redis_dag.py', '--cfg-path', '/tmp/tmp126zzbr4']
+[2025-12-07T23:12:29.864+0000] {standard_task_runner.py:85} INFO - Job 64: Subtask s3_to_redis_group.load_csv_to_redis_table
+[2025-12-07T23:12:29.908+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:12:30.059+0000] {task_command.py:416} INFO - Running <TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.load_csv_to_redis_table manual__2025-12-07T23:10:16.563090+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:12:30.479+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_redis_data_pipeline' AIRFLOW_CTX_TASK_ID='s3_to_redis_group.load_csv_to_redis_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:10:16.563090+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:10:16.563090+00:00'
+[2025-12-07T23:12:30.541+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:12:30.542+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:12:31.532+0000] {logging_mixin.py:154} INFO - Read 3 rows from S3 CSV
+[2025-12-07T23:12:31.589+0000] {base.py:73} INFO - Using connection ID 'redis_postgres_conn_id' for task execution.
+[2025-12-07T23:12:31.918+0000] {sql.py:418} INFO - Running statement: 
+        INSERT INTO redis_data (City, State, Zip, Census_2020)
+        VALUES ('Tampa', 'Florida', 33558, 43434322);
+        , parameters: None
+[2025-12-07T23:12:31.997+0000] {sql.py:427} INFO - Rows affected: 1
+[2025-12-07T23:12:32.093+0000] {base.py:73} INFO - Using connection ID 'redis_postgres_conn_id' for task execution.
+[2025-12-07T23:12:32.456+0000] {sql.py:418} INFO - Running statement: 
+        INSERT INTO redis_data (City, State, Zip, Census_2020)
+        VALUES ('Houston', 'Texas', 30716, 803842434);
+        , parameters: None
+[2025-12-07T23:12:32.535+0000] {sql.py:427} INFO - Rows affected: 1
+[2025-12-07T23:12:32.625+0000] {base.py:73} INFO - Using connection ID 'redis_postgres_conn_id' for task execution.
+[2025-12-07T23:12:32.974+0000] {sql.py:418} INFO - Running statement: 
+        INSERT INTO redis_data (City, State, Zip, Census_2020)
+        VALUES ('Atlanta', 'Georgia', 34232, 7644565);
+        , parameters: None
+[2025-12-07T23:12:33.057+0000] {sql.py:427} INFO - Rows affected: 1
+[2025-12-07T23:12:33.100+0000] {logging_mixin.py:154} INFO - Successfully loaded 3 rows into redis_data table
+[2025-12-07T23:12:33.101+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-12-07T23:12:33.163+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_redis_data_pipeline, task_id=s3_to_redis_group.load_csv_to_redis_table, execution_date=20251207T231016, start_date=20251207T231229, end_date=20251207T231233
+[2025-12-07T23:12:33.244+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:12:33.333+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

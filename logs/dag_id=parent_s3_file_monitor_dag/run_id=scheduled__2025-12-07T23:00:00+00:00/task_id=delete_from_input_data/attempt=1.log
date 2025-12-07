@@ -1,0 +1,16 @@
+[2025-12-07T23:05:10.694+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.delete_from_input_data scheduled__2025-12-07T23:00:00+00:00 [queued]>
+[2025-12-07T23:05:10.721+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.delete_from_input_data scheduled__2025-12-07T23:00:00+00:00 [queued]>
+[2025-12-07T23:05:10.722+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:05:10.755+0000] {taskinstance.py:1382} INFO - Executing <Task(S3DeleteObjectsOperator): delete_from_input_data> on 2025-12-07 23:00:00+00:00
+[2025-12-07T23:05:10.767+0000] {standard_task_runner.py:57} INFO - Started process 3249 to run task
+[2025-12-07T23:05:10.781+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parent_s3_file_monitor_dag', 'delete_from_input_data', 'scheduled__2025-12-07T23:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/parent_s3_file_monitor_dag.py', '--cfg-path', '/tmp/tmpptsk7k4c']
+[2025-12-07T23:05:10.793+0000] {standard_task_runner.py:85} INFO - Job 35: Subtask delete_from_input_data
+[2025-12-07T23:05:10.871+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:05:11.078+0000] {task_command.py:416} INFO - Running <TaskInstance: parent_s3_file_monitor_dag.delete_from_input_data scheduled__2025-12-07T23:00:00+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:05:11.501+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parent_s3_file_monitor_dag' AIRFLOW_CTX_TASK_ID='delete_from_input_data' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-07T23:00:00+00:00'
+[2025-12-07T23:05:11.560+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:05:11.562+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:05:13.262+0000] {s3.py:1331} INFO - Deleted: ['input_data/US_Cities_Sample.csv']
+[2025-12-07T23:05:13.302+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=parent_s3_file_monitor_dag, task_id=delete_from_input_data, execution_date=20251207T230000, start_date=20251207T230510, end_date=20251207T230513
+[2025-12-07T23:05:13.364+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:05:13.447+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

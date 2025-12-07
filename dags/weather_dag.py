@@ -1,8 +1,9 @@
 from airflow import DAG
 from airflow.providers.http.sensors.http import HttpSensor
-from airflow.providers.http.operators.http import HttpOperator
+from airflow.providers.http.operators.http import SimpleHttpOperator
 from airflow.operators.python import PythonOperator
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+from airflow.models import Variable
 from datetime import datetime, timedelta
 import json
 import pandas as pd
@@ -70,6 +71,10 @@ default_args = {
     'retry_delay': timedelta(minutes=2)
 }
 
+# Get API key from environment variable or Airflow Variable
+weather_api_key = Variable.get('WEATHER_API_KEY', default_var=os.getenv('WEATHER_API_KEY', ''))
+weather_endpoint = f'data/2.5/weather?q=London,uk&APPID={weather_api_key}'
+
 with DAG(
     'weather_data_pipeline',
     default_args=default_args,
@@ -78,18 +83,18 @@ with DAG(
     catchup=False) as dag:
 
     is_weather_data_available = HttpSensor(
-        task_id='is_weather_api_ready',
-        http_conn_id='weather_api',
-        endpoint='data/2.5/weather?q=London,uk&APPID=26c4fd67839444eaa2cd475aba7b1020',
+        task_id='is_weather_api_conn_ready',
+        http_conn_id='weather_api_conn',
+        endpoint=weather_endpoint,
         response_check=lambda response: "weather" in response.text,
         poke_interval=5,
         timeout=20
     ) 
 
-    extract_weather_data = HttpOperator(
+    extract_weather_data = SimpleHttpOperator(
         task_id='extract_weather_data',
-        http_conn_id='weather_api',
-        endpoint='data/2.5/weather?q=London,uk&APPID=26c4fd67839444eaa2cd475aba7b1020'
+        http_conn_id='weather_api_conn',
+        endpoint=weather_endpoint
     )
 
     transform_weather_data = PythonOperator(

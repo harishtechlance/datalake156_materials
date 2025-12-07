@@ -1,0 +1,15 @@
+[2025-12-07T23:14:28.797+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.start_pipeline manual__2025-12-07T23:14:25.904765+00:00 [queued]>
+[2025-12-07T23:14:28.814+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.start_pipeline manual__2025-12-07T23:14:25.904765+00:00 [queued]>
+[2025-12-07T23:14:28.814+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:14:28.837+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): start_pipeline> on 2025-12-07 23:14:25.904765+00:00
+[2025-12-07T23:14:28.847+0000] {standard_task_runner.py:57} INFO - Started process 3641 to run task
+[2025-12-07T23:14:28.862+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_to_redis_data_pipeline', 'start_pipeline', 'manual__2025-12-07T23:14:25.904765+00:00', '--job-id', '74', '--raw', '--subdir', 'DAGS_FOLDER/s3_to_redis_dag.py', '--cfg-path', '/tmp/tmp1kchm1lm']
+[2025-12-07T23:14:28.876+0000] {standard_task_runner.py:85} INFO - Job 74: Subtask start_pipeline
+[2025-12-07T23:14:28.947+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:14:29.156+0000] {task_command.py:416} INFO - Running <TaskInstance: s3_to_redis_data_pipeline.start_pipeline manual__2025-12-07T23:14:25.904765+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:14:29.604+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_redis_data_pipeline' AIRFLOW_CTX_TASK_ID='start_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:14:25.904765+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:14:25.904765+00:00'
+[2025-12-07T23:14:29.609+0000] {logging_mixin.py:154} INFO - Starting S3 to Redis pipeline...
+[2025-12-07T23:14:29.609+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-12-07T23:14:29.673+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_redis_data_pipeline, task_id=start_pipeline, execution_date=20251207T231425, start_date=20251207T231428, end_date=20251207T231429
+[2025-12-07T23:14:29.752+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:14:29.893+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

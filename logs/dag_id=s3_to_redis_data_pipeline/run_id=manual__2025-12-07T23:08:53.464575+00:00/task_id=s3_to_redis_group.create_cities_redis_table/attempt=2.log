@@ -1,0 +1,135 @@
+[2025-12-07T23:11:01.807+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [queued]>
+[2025-12-07T23:11:01.825+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [queued]>
+[2025-12-07T23:11:01.825+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 2
+[2025-12-07T23:11:01.850+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): s3_to_redis_group.create_cities_redis_table> on 2025-12-07 23:08:53.464575+00:00
+[2025-12-07T23:11:01.860+0000] {standard_task_runner.py:57} INFO - Started process 3503 to run task
+[2025-12-07T23:11:01.869+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_to_redis_data_pipeline', 's3_to_redis_group.create_cities_redis_table', 'manual__2025-12-07T23:08:53.464575+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/s3_to_redis_dag.py', '--cfg-path', '/tmp/tmp2jn0ukcz']
+[2025-12-07T23:11:01.876+0000] {standard_task_runner.py:85} INFO - Job 62: Subtask s3_to_redis_group.create_cities_redis_table
+[2025-12-07T23:11:01.948+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:11:02.138+0000] {task_command.py:416} INFO - Running <TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:11:02.560+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_redis_data_pipeline' AIRFLOW_CTX_TASK_ID='s3_to_redis_group.create_cities_redis_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:08:53.464575+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:08:53.464575+00:00'
+[2025-12-07T23:11:02.622+0000] {base.py:73} INFO - Using connection ID 'redis_postgres_conn_id' for task execution.
+[2025-12-07T23:11:02.984+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/s3_to_redis_dag.py", line 22, in create_redis_table_func
+    pg_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+                 ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/postgres/hooks/postgres.py", line 155, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "harish-rds-inst-1.c61s6c4qwn1s.us-east-1.rds.amazonaws.com" (100.30.80.196), port 5432 failed: FATAL:  database "harish-rds-inst-1" does not exist
+
+[2025-12-07T23:11:03.052+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=s3_to_redis_data_pipeline, task_id=s3_to_redis_group.create_cities_redis_table, execution_date=20251207T230853, start_date=20251207T231101, end_date=20251207T231103
+[2025-12-07T23:11:03.096+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2025-12-07T23:11:03.097+0000] {configuration.py:1050} WARNING - section/key [smtp/smtp_user] not found in config
+[2025-12-07T23:11:03.097+0000] {email.py:270} INFO - Email alerting: attempt 1
+[2025-12-07T23:11:03.149+0000] {configuration.py:1050} WARNING - section/key [smtp/smtp_user] not found in config
+[2025-12-07T23:11:03.149+0000] {email.py:270} INFO - Email alerting: attempt 1
+[2025-12-07T23:11:03.150+0000] {taskinstance.py:2007} ERROR - Failed to send email to: ['harish.techlance@gmail.com']
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1518, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1681, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1744, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/s3_to_redis_dag.py", line 22, in create_redis_table_func
+    pg_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+                 ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/postgres/hooks/postgres.py", line 155, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "harish-rds-inst-1.c61s6c4qwn1s.us-east-1.rds.amazonaws.com" (100.30.80.196), port 5432 failed: FATAL:  database "harish-rds-inst-1" does not exist
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2420, in email_alert
+    send_email(task.email, subject, html_content)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+           ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 272, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 316, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2005, in handle_failure
+    self.email_alert(error, task)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2422, in email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+           ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 272, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/utils/email.py", line 316, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+[2025-12-07T23:11:03.245+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 62 for task s3_to_redis_group.create_cities_redis_table (connection to server at "harish-rds-inst-1.c61s6c4qwn1s.us-east-1.rds.amazonaws.com" (100.30.80.196), port 5432 failed: FATAL:  database "harish-rds-inst-1" does not exist
+; 3503)
+[2025-12-07T23:11:03.291+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-07T23:11:03.419+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,37 @@
+[2025-12-07T23:08:58.486+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [queued]>
+[2025-12-07T23:08:58.501+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [queued]>
+[2025-12-07T23:08:58.501+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:08:58.524+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): s3_to_redis_group.create_cities_redis_table> on 2025-12-07 23:08:53.464575+00:00
+[2025-12-07T23:08:58.536+0000] {standard_task_runner.py:57} INFO - Started process 3402 to run task
+[2025-12-07T23:08:58.544+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 's3_to_redis_data_pipeline', 's3_to_redis_group.create_cities_redis_table', 'manual__2025-12-07T23:08:53.464575+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/s3_to_redis_dag.py', '--cfg-path', '/tmp/tmpymcig5t5']
+[2025-12-07T23:08:58.553+0000] {standard_task_runner.py:85} INFO - Job 49: Subtask s3_to_redis_group.create_cities_redis_table
+[2025-12-07T23:08:58.605+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:08:58.733+0000] {task_command.py:416} INFO - Running <TaskInstance: s3_to_redis_data_pipeline.s3_to_redis_group.create_cities_redis_table manual__2025-12-07T23:08:53.464575+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:08:59.027+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_redis_data_pipeline' AIRFLOW_CTX_TASK_ID='s3_to_redis_group.create_cities_redis_table' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:08:53.464575+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:08:53.464575+00:00'
+[2025-12-07T23:08:59.088+0000] {base.py:73} INFO - Using connection ID 'redis_postgres_conn_id' for task execution.
+[2025-12-07T23:08:59.466+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/s3_to_redis_dag.py", line 22, in create_redis_table_func
+    pg_hook.run(sql)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 385, in run
+    with closing(self.get_conn()) as conn:
+                 ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/postgres/hooks/postgres.py", line 155, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "harish-rds-inst-1.c61s6c4qwn1s.us-east-1.rds.amazonaws.com" (100.30.80.196), port 5432 failed: FATAL:  database "harish-rds-inst-1" does not exist
+
+[2025-12-07T23:08:59.533+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=s3_to_redis_data_pipeline, task_id=s3_to_redis_group.create_cities_redis_table, execution_date=20251207T230853, start_date=20251207T230858, end_date=20251207T230859
+[2025-12-07T23:08:59.576+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 49 for task s3_to_redis_group.create_cities_redis_table (connection to server at "harish-rds-inst-1.c61s6c4qwn1s.us-east-1.rds.amazonaws.com" (100.30.80.196), port 5432 failed: FATAL:  database "harish-rds-inst-1" does not exist
+; 3402)
+[2025-12-07T23:08:59.602+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-07T23:08:59.731+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

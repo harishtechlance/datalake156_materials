@@ -1,0 +1,29 @@
+[2025-12-07T23:05:10.741+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder scheduled__2025-12-07T22:55:00+00:00 [queued]>
+[2025-12-07T23:05:10.771+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder scheduled__2025-12-07T22:55:00+00:00 [queued]>
+[2025-12-07T23:05:10.771+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:05:10.805+0000] {taskinstance.py:1382} INFO - Executing <Task(S3CopyObjectOperator): move_to_processing_folder> on 2025-12-07 22:55:00+00:00
+[2025-12-07T23:05:10.818+0000] {standard_task_runner.py:57} INFO - Started process 3251 to run task
+[2025-12-07T23:05:10.832+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parent_s3_file_monitor_dag', 'move_to_processing_folder', 'scheduled__2025-12-07T22:55:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/parent_s3_file_monitor_dag.py', '--cfg-path', '/tmp/tmpnuq3iilx']
+[2025-12-07T23:05:10.845+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask move_to_processing_folder
+[2025-12-07T23:05:10.926+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:05:11.140+0000] {task_command.py:416} INFO - Running <TaskInstance: parent_s3_file_monitor_dag.move_to_processing_folder scheduled__2025-12-07T22:55:00+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:05:11.571+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parent_s3_file_monitor_dag' AIRFLOW_CTX_TASK_ID='move_to_processing_folder' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T22:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-07T22:55:00+00:00'
+[2025-12-07T23:05:11.631+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:05:11.632+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:05:13.475+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/amazon/aws/operators/s3.py", line 315, in execute
+    s3_hook.copy_object(
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 1272, in copy_object
+    response = self.get_conn().copy_object(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/botocore/client.py", line 535, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/botocore/client.py", line 980, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the CopyObject operation: The specified key does not exist.
+[2025-12-07T23:05:13.540+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=parent_s3_file_monitor_dag, task_id=move_to_processing_folder, execution_date=20251207T225500, start_date=20251207T230510, end_date=20251207T230513
+[2025-12-07T23:05:13.920+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 37 for task move_to_processing_folder (An error occurred (NoSuchKey) when calling the CopyObject operation: The specified key does not exist.; 3251)
+[2025-12-07T23:05:13.980+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-07T23:05:14.124+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,33 @@
+[2025-12-07T23:04:30.903+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:04:30.937+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:04:30.939+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:04:30.990+0000] {taskinstance.py:1382} INFO - Executing <Task(S3KeySensor): wait_for_s3_file> on 2025-12-07 23:04:28.923185+00:00
+[2025-12-07T23:04:31.002+0000] {standard_task_runner.py:57} INFO - Started process 3205 to run task
+[2025-12-07T23:04:31.022+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parent_s3_file_monitor_dag', 'wait_for_s3_file', 'manual__2025-12-07T23:04:28.923185+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/parent_s3_file_monitor_dag.py', '--cfg-path', '/tmp/tmpuzkgib4b']
+[2025-12-07T23:04:31.042+0000] {standard_task_runner.py:85} INFO - Job 29: Subtask wait_for_s3_file
+[2025-12-07T23:04:31.151+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:04:31.383+0000] {task_command.py:416} INFO - Running <TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:04:31.839+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parent_s3_file_monitor_dag' AIRFLOW_CTX_TASK_ID='wait_for_s3_file' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:04:28.923185+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:04:28.923185+00:00'
+[2025-12-07T23:04:31.909+0000] {s3.py:106} INFO - Poking for key : s3://***-tuple-spectra/input_data/US_Cities_Sample.csv
+[2025-12-07T23:04:31.972+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:04:31.974+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:04:34.309+0000] {taskinstance.py:1897} INFO - Rescheduling task, marking task as UP_FOR_RESCHEDULE
+[2025-12-07T23:04:34.373+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:04:34.525+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-07T23:05:05.504+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:05:05.528+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [queued]>
+[2025-12-07T23:05:05.529+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-07T23:05:05.573+0000] {taskinstance.py:1382} INFO - Executing <Task(S3KeySensor): wait_for_s3_file> on 2025-12-07 23:04:28.923185+00:00
+[2025-12-07T23:05:05.587+0000] {standard_task_runner.py:57} INFO - Started process 3237 to run task
+[2025-12-07T23:05:05.601+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parent_s3_file_monitor_dag', 'wait_for_s3_file', 'manual__2025-12-07T23:04:28.923185+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/parent_s3_file_monitor_dag.py', '--cfg-path', '/tmp/tmpadne0a7j']
+[2025-12-07T23:05:05.613+0000] {standard_task_runner.py:85} INFO - Job 32: Subtask wait_for_s3_file
+[2025-12-07T23:05:05.690+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-07T23:05:05.885+0000] {task_command.py:416} INFO - Running <TaskInstance: parent_s3_file_monitor_dag.wait_for_s3_file manual__2025-12-07T23:04:28.923185+00:00 [running]> on host 0f9d3bc81df5
+[2025-12-07T23:05:06.331+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='harish.techlance@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parent_s3_file_monitor_dag' AIRFLOW_CTX_TASK_ID='wait_for_s3_file' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T23:04:28.923185+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-07T23:04:28.923185+00:00'
+[2025-12-07T23:05:06.399+0000] {s3.py:106} INFO - Poking for key : s3://***-tuple-spectra/input_data/US_Cities_Sample.csv
+[2025-12-07T23:05:06.458+0000] {base.py:73} INFO - Using connection ID 'aws_default_conn_id' for task execution.
+[2025-12-07T23:05:06.460+0000] {connection_wrapper.py:378} INFO - AWS Connection (conn_id='aws_default_conn_id', conn_type='aws') credentials retrieved from login and password.
+[2025-12-07T23:05:08.025+0000] {base.py:287} INFO - Success criteria met. Exiting.
+[2025-12-07T23:05:08.468+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=parent_s3_file_monitor_dag, task_id=wait_for_s3_file, execution_date=20251207T230428, start_date=20251207T230505, end_date=20251207T230508
+[2025-12-07T23:05:08.551+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-07T23:05:08.692+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
